@@ -259,6 +259,7 @@
           </h2>
           <div class="row">
             <!-- Loop through lesson objects sorted in cart -->
+            <!-- Setting key to get unqiue value from concatenating index and lesson._id from mongoDB -->
             <div
               class="col-12 col-md-6 col-lg-4"
               v-for="(lesson, index) in cart"
@@ -494,21 +495,22 @@ export default {
       this.searchInput = "";
       this.checkSearchBar = false;
     },
-    // removed(id) method to remove lesson
+    // removed(id, index) method to remove lesson
+    // index coming from component to get unqiue lesson
     remove(id, index) {
       let arr = this.cart;
       let lessons = this.lessons;
 
       arr.splice(index, 1);
 
-      // adding back 1 space to the lesson that was removed from cart
+      // Adding spaces back to the lessons array
       for (let i = 0; i < lessons.length; i++) {
         if (lessons[i]["_id"] == id) {
           lessons[i].spaces = lessons[i].spaces + 1;
         }
       }
 
-      // condition to automatically direct user to the home page when there are no items in the cart
+      // showing lesson page if cart is empty
       if (this.cart.length === 0) {
         this.showLesson = true;
         this.searchInput = "";
