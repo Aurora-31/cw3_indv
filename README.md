@@ -1,5 +1,7 @@
 # cw3_indv
 
+Link to Github Repository: https://github.com/Aurora-31/cw3_indv
+
 ## Project setup
 ```
 npm install
