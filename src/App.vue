@@ -262,6 +262,7 @@
               v-for="(lesson, index) in cart"
               :key="index + ' ' + lesson._id"
             >
+            <!-- Checkout-vue component added for displaying cart products on the checkout page -->
               <checkout-vue
                 :lesson="lesson"
                 :index="index"
