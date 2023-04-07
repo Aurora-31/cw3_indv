@@ -213,6 +213,7 @@
             v-for="lesson in searchResults"
             :key="lesson._id"
           >
+          <!-- lesson-vue component to show the search result lessons -->
             <lesson-vue
               :lesson="lesson"
               :cart="cart"
@@ -365,6 +366,7 @@ import LessonVue from "./components/Lesson.vue";
 // import Checkout component
 import CheckoutVue from "./components/Checkout.vue";
 export default {
+  // Declaring components
   components: {
     LessonVue,
     CheckoutVue,
