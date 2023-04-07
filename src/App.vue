@@ -466,6 +466,7 @@ export default {
         this.checkSearchBar = false;
         this.showLesson = true;
       }
+      // Declaring a variable for this to use in the fetch request
       let webstore=this
 
       // fetch request to get search results by appending the search input in lower case
