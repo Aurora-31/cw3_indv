@@ -238,6 +238,7 @@
               v-for="lesson in sortedLessons"
               :key="lesson._id"
             >
+            <!-- lesson-vue component for displaying all lessons -->
               <lesson-vue
                 :lesson="lesson"
                 :cart="cart"
@@ -359,7 +360,9 @@
 
 <script>
 /* eslint-disable */
+// import Lesson component
 import LessonVue from "./components/Lesson.vue";
+// import Checkout component
 import CheckoutVue from "./components/Checkout.vue";
 export default {
   components: {
