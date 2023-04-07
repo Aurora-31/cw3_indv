@@ -28,14 +28,6 @@
         Spaces Left: {{ lesson.spaces }}
       </p>
       <div style="text-align: center">
-        <!-- <div style="text-align: right; margin-bottom: 15px">
-          <span v-for="(n, index) in lesson.rating" :key="index"
-            ><i style="color: #fcc404" class="fa-solid fa-star"></i
-          ></span>
-          <span v-for="(n, index) in 5 - lesson.rating" :key="index"
-            ><i class="fa-regular fa-star"></i
-          ></span>
-        </div> -->
         <button
           class="btn btn-warning"
           v-on:click="addLesson(lesson)"
